@@ -104,7 +104,8 @@ class _LoadingState extends State<Loading> {
                       }));
                     },
                     style: TextButton.styleFrom(
-                      foregroundColor: Colors.white, shape: RoundedRectangleBorder(
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0)),
                       padding: const EdgeInsets.all(15),
                       backgroundColor: Colors.blue[400],

@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:testapp/pages/home.dart';
 import 'package:testapp/pages/launch.dart';
@@ -31,11 +29,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
-                    primary: Colors.grey,
-                    onPrimary: Colors.white,
                   ),
                   child: const Text('Start'),
                 ),
@@ -48,11 +44,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
-                    primary: Colors.grey,
-                    onPrimary: Colors.white,
                   ),
                   child: const Text('Stop'),
                 ),
@@ -70,11 +64,9 @@ class LandscapeView extends StatelessWidget {
               }));
             },
             style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
+              foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               padding: const EdgeInsets.all(15),
-              primary: Colors.grey,
-              onPrimary: Colors.white,
             ),
             child: const Text('Left'),
           ),
@@ -93,11 +85,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
-                    primary: Colors.grey,
-                    onPrimary: Colors.white,
                   ),
                   child: const Text('Forward'),
                 ),
@@ -112,11 +102,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
-                    primary: Colors.grey,
-                    onPrimary: Colors.white,
                   ),
                   child: const Text('Reverse'),
                 ),
@@ -133,11 +121,9 @@ class LandscapeView extends StatelessWidget {
               }));
             },
             style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
+              foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               padding: const EdgeInsets.all(15),
-              primary: Colors.grey,
-              onPrimary: Colors.white,
             ),
             child: const Text('Reverse'),
           ),
