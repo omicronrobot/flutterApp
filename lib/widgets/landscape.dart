@@ -25,11 +25,13 @@ class LandscapeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return const Loading();
+                      return const LoadingPage();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.grey,
+                    shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
                   ),
@@ -44,7 +46,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.grey,
+                    shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
                   ),
@@ -64,7 +68,9 @@ class LandscapeView extends StatelessWidget {
               }));
             },
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.grey,
+              shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               padding: const EdgeInsets.all(15),
             ),
@@ -81,11 +87,13 @@ class LandscapeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return const Loading();
+                      return const LoadingPage();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.grey,
+                    shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
                   ),
@@ -102,7 +110,9 @@ class LandscapeView extends StatelessWidget {
                     }));
                   },
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.grey,
+                    shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0)),
                     padding: const EdgeInsets.all(15),
                   ),
@@ -121,7 +131,9 @@ class LandscapeView extends StatelessWidget {
               }));
             },
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: RoundedRectangleBorder(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.grey,
+              shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
               padding: const EdgeInsets.all(15),
             ),

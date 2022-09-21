@@ -2,18 +2,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:testapp/models/app_banner.dart';
-import 'package:testapp/pages/home.dart';
+import 'package:testapp/pages/setup.dart';
 import 'package:testapp/widgets/slide_dots.dart';
 import '../widgets/slider.dart';
 
-class Loading extends StatefulWidget {
-  const Loading({Key? key}) : super(key: key);
+class LoadingPage extends StatefulWidget {
+  const LoadingPage({Key? key}) : super(key: key);
 
   @override
-  State<Loading> createState() => _LoadingState();
+  State<LoadingPage> createState() => _LoadingPageState();
 }
 
-class _LoadingState extends State<Loading> {
+class _LoadingPageState extends State<LoadingPage> {
   int _currentPage = 0;
 
   final PageController _pageController = PageController(
@@ -100,7 +100,7 @@ class _LoadingState extends State<Loading> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const Home();
+                        return const SetupPage();
                       }));
                     },
                     style: TextButton.styleFrom(
