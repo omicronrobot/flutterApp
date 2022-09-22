@@ -11,7 +11,6 @@ class PortraitView extends StatefulWidget {
 }
 
 class _PortraitViewState extends State<PortraitView> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +32,7 @@ class _PortraitViewState extends State<PortraitView> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const Loading();
+                        return const LoadingPage();
                       }));
                     },
                     style: ElevatedButton.styleFrom(
@@ -95,7 +94,7 @@ class _PortraitViewState extends State<PortraitView> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const Loading();
+                        return const LoadingPage();
                       }));
                     },
                     style: ElevatedButton.styleFrom(
