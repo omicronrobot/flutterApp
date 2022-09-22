@@ -14,8 +14,8 @@ class SetupPage extends StatefulWidget {
 class _SetupPageState extends State<SetupPage> {
   @override
   Widget build(BuildContext context) {
-    double width=MediaQuery.of(context).size.width;
-    double height=MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -23,7 +23,7 @@ class _SetupPageState extends State<SetupPage> {
           children: [
             Container(
               width: width,
-              height: height*0.35,
+              height: height * 0.35,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/wavy_background.jpg'),
@@ -31,7 +31,9 @@ class _SetupPageState extends State<SetupPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Text(
               'Welcome to Omicron',
               style: TextStyle(
@@ -42,7 +44,9 @@ class _SetupPageState extends State<SetupPage> {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
@@ -118,24 +122,24 @@ class _SetupPageState extends State<SetupPage> {
                     height: 35,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return const OrientationPage();
-                          }));
-                        },
-                        style: TextButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5.0)),
-                          padding: const EdgeInsets.all(15),
-                          backgroundColor: Colors.orange[700],
-                        ),
-                        child: const Text(
-                          'Setup',
-                          style: TextStyle(color: Colors.white),
-                        ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const OrientationPage();
+                        }));
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0)),
+                        padding: const EdgeInsets.all(15),
+                        backgroundColor: Colors.orange[700],
                       ),
+                      child: const Text(
+                        'Setup',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
                   ),
                   Container(
                     width: width,
@@ -143,11 +147,11 @@ class _SetupPageState extends State<SetupPage> {
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
                       onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return const Loading();
-                          }));
-                        },
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return const Loading();
+                        }));
+                      },
                       style: const ButtonStyle(alignment: Alignment.centerLeft),
                       child: Text(
                         'Guide?',

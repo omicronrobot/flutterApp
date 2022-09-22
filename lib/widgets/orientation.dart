@@ -10,7 +10,6 @@ class OrientationPage extends StatefulWidget {
 }
 
 class _OrientationPageState extends State<OrientationPage> {
-
   @override
   Widget build(BuildContext context) {
     final deviceOrientation = MediaQuery.of(context).orientation;

@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
       body: Center(
         child: pages.elementAt(pageIndex),
       ),
-     bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded),

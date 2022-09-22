@@ -12,7 +12,7 @@ class CurvedPaint extends StatelessWidget {
       body: Container(
         child: Center(
             child: CustomPaint(
-          size: Size(width, height*0.35),
+          size: Size(width, height * 0.35),
           painter: CurvedPainter(),
         )),
       ),

@@ -11,7 +11,6 @@ class PortraitView extends StatefulWidget {
 }
 
 class _PortraitViewState extends State<PortraitView> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
