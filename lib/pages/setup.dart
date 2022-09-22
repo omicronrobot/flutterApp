@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testapp/pages/loading.dart';
+import 'package:testapp/widgets/curved_painter.dart';
 import 'package:testapp/widgets/orientation.dart';
 
 class SetupPage extends StatefulWidget {
@@ -21,18 +22,12 @@ class _SetupPageState extends State<SetupPage> {
       body: Center(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               width: width,
-              height: height * 0.35,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/wavy_background.jpg'),
-                  fit: BoxFit.cover,
-                ),
+              height: 0.3 * height,
+              child: CustomPaint(
+                painter: CurvedPainter(),
               ),
-            ),
-            const SizedBox(
-              height: 20,
             ),
             Text(
               'Welcome to Omicron',
@@ -143,7 +138,6 @@ class _SetupPageState extends State<SetupPage> {
                   ),
                   Container(
                     width: width,
-                    height: 40,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
                       onPressed: () {
@@ -163,7 +157,6 @@ class _SetupPageState extends State<SetupPage> {
                   ),
                   Container(
                     width: width,
-                    height: 40,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
                       onPressed: () {
