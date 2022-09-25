@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:testapp/pages/home.dart';
 import 'package:testapp/pages/loading.dart';
-import 'package:testapp/widgets/orientation.dart';
 
 class SetupPage extends StatefulWidget {
   const SetupPage({super.key});
@@ -119,13 +119,13 @@ class _SetupPageState extends State<SetupPage> {
                   ),
                   Container(
                     width: width,
-                    height: 35,
+                    height: 40,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (BuildContext context) {
-                          return const OrientationPage();
+                          return const Home();
                         }));
                       },
                       style: TextButton.styleFrom(
@@ -144,12 +144,12 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    margin: const EdgeInsets.fromLTRB(15, 0, 280, 0),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (BuildContext context) {
-                          return const Loading();
+                          return const LoadingPage();
                         }));
                       },
                       style: const ButtonStyle(alignment: Alignment.centerLeft),
@@ -164,12 +164,12 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    margin: const EdgeInsets.fromLTRB(15, 0, 280, 0),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (BuildContext context) {
-                          return const Loading();
+                          return const LoadingPage();
                         }));
                       },
                       style: const ButtonStyle(alignment: Alignment.centerLeft),

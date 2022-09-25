@@ -32,7 +32,7 @@ class _PortraitViewState extends State<PortraitView> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const Loading();
+                        return const LoadingPage();
                       }));
                     },
                     style: ElevatedButton.styleFrom(
@@ -94,7 +94,7 @@ class _PortraitViewState extends State<PortraitView> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const Loading();
+                        return const LoadingPage();
                       }));
                     },
                     style: ElevatedButton.styleFrom(

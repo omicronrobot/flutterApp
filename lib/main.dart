@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/pages/home.dart';
 import 'package:testapp/pages/launch.dart';
 import 'package:testapp/pages/setup.dart';
-import 'package:testapp/widgets/orientation.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,7 +12,7 @@ void main() {
             nextRoute: '/setup',
           ),
       '/setup': (context) => const SetupPage(),
-      '/home': (context) => const OrientationPage(),
+      '/home': (context) => const Home(),
     },
   ));
 }
