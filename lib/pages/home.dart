@@ -56,6 +56,26 @@ class _HomeState extends State<Home> {
       //     selectedItemColor: Colors.deepOrangeAccent,
       //     onTap: onItemTapped,
       //   ),
+        // child: pages.elementAt(pageIndex),
+    //  bottomNavigationBar: BottomNavigationBar(
+    //     items: const <BottomNavigationBarItem>[
+    //       BottomNavigationBarItem(
+    //         icon: Icon(Icons.home_rounded),
+    //         label: 'home',
+    //       ),
+    //       BottomNavigationBarItem(
+    //         icon: Icon(Icons.info_outline_rounded),
+    //         label: 'info',
+    //       ),
+    //       BottomNavigationBarItem(
+    //         icon: Icon(Icons.arrow_back_ios_new_rounded),
+    //         label: 'back',
+    //       ),
+    //     ],
+    //     currentIndex: pageIndex,
+    //     selectedItemColor: Colors.deepOrangeAccent,
+    //     onTap: onItemTapped,
+    //   ),
     );
   }
 }
