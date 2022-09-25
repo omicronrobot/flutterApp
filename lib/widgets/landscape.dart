@@ -25,7 +25,7 @@ class LandscapeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return const Loading();
+                      return const LoadingPage();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
@@ -87,7 +87,7 @@ class LandscapeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return const Loading();
+                      return const LoadingPage();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
