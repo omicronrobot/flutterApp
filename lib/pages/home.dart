@@ -56,6 +56,7 @@ class _HomeState extends State<Home> {
       //     selectedItemColor: Colors.deepOrangeAccent,
       //     onTap: onItemTapped,
       //   ),
+      
         // child: pages.elementAt(pageIndex),
     //  bottomNavigationBar: BottomNavigationBar(
     //     items: const <BottomNavigationBarItem>[
