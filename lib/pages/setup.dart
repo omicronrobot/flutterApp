@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testapp/pages/home.dart';
+import 'package:testapp/pages/joypad.dart';
 import 'package:testapp/pages/loading.dart';
 
 class SetupPage extends StatefulWidget {
@@ -125,7 +126,7 @@ class _SetupPageState extends State<SetupPage> {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (BuildContext context) {
-                          return const Home();
+                          return const JoypadPage();
                         }));
                       },
                       style: TextButton.styleFrom(

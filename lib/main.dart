@@ -1,7 +1,8 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
-import 'package:testapp/pages/home.dart';
+import 'package:testapp/pages/joypad.dart';
 import 'package:testapp/pages/launch.dart';
-import 'package:testapp/pages/loading.dart';
 import 'package:testapp/pages/setup.dart';
 
 void main() {
@@ -12,8 +13,6 @@ void main() {
     ),
     routes: {
       '/setup': (context) => const SetupPage(),
-      // '/loading': (context) => const LoadingPage(),
-      // '/home': (context) => const Home(),
     },
   ));
 }
