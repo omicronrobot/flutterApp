@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Launch extends StatefulWidget {
   final String nextRoute; //variable to store the route
@@ -29,15 +30,37 @@ class _LaunchState extends State<Launch> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: Colors.orange[700],
-      // backgroundColor: const Color(0xff152238),
-      // ignore: prefer_const_constructors
-      body: Center(
-        child: const Text(
-          'OMICRON',
-          style: TextStyle(
-              fontSize: 40, color: Colors.grey, fontFamily: "FredokaOne"),
-        ),
+      backgroundColor: const Color.fromARGB(230, 203, 109, 21),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 0.0,
+              top: 100.0,
+              right: 0.0,
+              bottom: 0.0,
+            ),
+            child: SvgPicture.asset(
+              "assets/iconfinder_robot_9025976.svg",
+              width: 200,
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text(
+              "Robots Assemble",
+              style: TextStyle(
+                fontSize: 40,
+                color: Colors.grey,
+                fontFamily: "FredokaOne",
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
       ),
     );
   }
