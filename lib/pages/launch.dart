@@ -19,7 +19,7 @@ class _LaunchState extends State<Launch> {
     super.initState();
     //create a timer to switch from Launch to Home after 3 seconds
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 4),
       () {
         Navigator.of(context).pushReplacementNamed(widget.nextRoute);
       },
