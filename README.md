@@ -37,6 +37,7 @@ samples, guidance on mobile development, and a full API reference.
 - [ ] Setup start recording commands for a replay
 - [ ] Setup stop recording commands for a replay
 - [ ] Setup replay for stored command
+- [ ] Setup CI/CD [Ref](https://levelup.gitconnected.com/ci-cd-for-flutter-using-github-actions-and-fastlane-6dfc9431ee9a)
 
 ## Thanks
 
