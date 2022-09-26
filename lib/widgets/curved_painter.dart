@@ -22,5 +22,5 @@ class CurvedPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
-  }  
+  }
 }
