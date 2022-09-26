@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:testapp/pages/control.dart';
-import 'package:testapp/widgets/curved_painter.dart';
+import 'package:omicronapp/pages/control.dart';
+import 'package:omicronapp/widgets/curved_painter.dart';
 
 class SetupPage extends StatefulWidget {
   const SetupPage({super.key});
