@@ -1,9 +1,8 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:testapp/pages/home.dart';
-import 'package:testapp/pages/joypad.dart';
-import 'package:testapp/pages/loading.dart';
+import 'package:omicronapp/pages/control.dart';
+import 'package:omicronapp/widgets/curved_painter.dart';
 
 class SetupPage extends StatefulWidget {
   const SetupPage({super.key});
@@ -23,19 +22,17 @@ class _SetupPageState extends State<SetupPage> {
         child: Column(
           children: [
             Container(
-              width: width,
-              height: height * 0.35,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/wavy_background.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
+              child: Center(
+                  child: CustomPaint(
+                size: Size(width, height * 0.4),
+                painter: CurvedPainter(),
+              )),
             ),
             const SizedBox(
               height: 20,
             ),
-            Text(
+            Container(
+                child: Text(
               'Welcome to Omicron',
               style: TextStyle(
                 fontFamily: 'FredokaOne',
@@ -44,17 +41,16 @@ class _SetupPageState extends State<SetupPage> {
                 color: Colors.orange[700],
               ),
               textAlign: TextAlign.center,
-            ),
+            )),
             const SizedBox(
               height: 20,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 children: [
                   Container(
                     width: width,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Text(
                       'Protocol',
                       style: TextStyle(
@@ -69,13 +65,12 @@ class _SetupPageState extends State<SetupPage> {
                     height: 10,
                   ),
                   Container(
-                    width: width,
                     height: 40,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextField(
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintText: 'http/mqqt',
+                        hintText: 'http/mqqt/ws',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -87,7 +82,7 @@ class _SetupPageState extends State<SetupPage> {
                   ),
                   Container(
                     width: width,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Text(
                       'Endpoint',
                       style: TextStyle(
@@ -104,7 +99,7 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextField(
                       obscureText: false,
                       decoration: InputDecoration(
@@ -121,7 +116,7 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(context,
@@ -145,14 +140,9 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.fromLTRB(15, 0, 280, 0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (BuildContext context) {
-                          return const LoadingPage();
-                        }));
-                      },
+                      onPressed: () {},
                       style: const ButtonStyle(alignment: Alignment.centerLeft),
                       child: Text(
                         'Guide?',
@@ -165,14 +155,9 @@ class _SetupPageState extends State<SetupPage> {
                   Container(
                     width: width,
                     height: 40,
-                    margin: const EdgeInsets.fromLTRB(15, 0, 280, 0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (BuildContext context) {
-                          return const LoadingPage();
-                        }));
-                      },
+                      onPressed: () {},
                       style: const ButtonStyle(alignment: Alignment.centerLeft),
                       child: Text(
                         'Privacy',
