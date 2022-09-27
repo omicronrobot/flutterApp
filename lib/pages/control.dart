@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:control_pad/control_pad.dart';
 
 class JoypadPage extends StatefulWidget {
+
   const JoypadPage({super.key});
 
   @override
@@ -10,6 +11,7 @@ class JoypadPage extends StatefulWidget {
 }
 
 class _JoypadPageState extends State<JoypadPage> {
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
