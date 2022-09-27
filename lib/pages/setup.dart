@@ -128,7 +128,7 @@ class _SetupPageState extends State<SetupPage> {
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5.0)),
-                        padding: const EdgeInsets.all(15),
+                        // padding: const EdgeInsets.symmetrical(horizontal:15),
                         backgroundColor: Colors.orange[700],
                       ),
                       child: const Text(

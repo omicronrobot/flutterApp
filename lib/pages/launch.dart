@@ -30,7 +30,8 @@ class _LaunchState extends State<Launch> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: const Color.fromARGB(230, 203, 109, 21),
+      // backgroundColor: const Color.fromARGB(230, 203, 109, 21),
+      backgroundColor: Colors.orange[700],
       body: Column(
         children: [
           Padding(
