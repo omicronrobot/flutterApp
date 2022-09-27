@@ -2,7 +2,7 @@
 
 The following is a set of guidelines to contribute to Omicron Flutter App Board and its repositories, which are hosted on the [omicronrobot Organization](https://github.com/omicronrobot) on GitHub.
 
-This project adheres to the [Contributor Covenant 1.2](http://contributor-covenant.org/version/1/2/0). By participating, you are expected to uphold this code. Please report unacceptable behavior to [info@rodneyosodo.com](mailto:info@rodneyosodo.com).
+This project adheres to the [Contributor Covenant 1.2](http://contributor-covenant.org/version/1/2/0). By participating, you are expected to uphold this code. Please report unacceptable behavior to gitu[dot]kelvin[at]students[dot]jkuat[dot]ac[dot]ke and osodo[dot]david[at]students[dot]jkuat[dot]ac[dot]ke.
 
 ## Reporting issues
 
