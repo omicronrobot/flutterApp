@@ -19,7 +19,7 @@ class _LaunchState extends State<Launch> {
     super.initState();
     //create a timer to switch from Launch to Home after 3 seconds
     Timer(
-      const Duration(seconds: 4),
+      const Duration(seconds: 3),
       () {
         Navigator.of(context).pushReplacementNamed(widget.nextRoute);
       },
@@ -30,19 +30,22 @@ class _LaunchState extends State<Launch> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: const Color.fromARGB(230, 203, 109, 21),
+      // backgroundColor: const Color.fromARGB(230, 203, 109, 21),
+      backgroundColor: Colors.orange[700],
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(
-              left: 0.0,
+              left: 10.0,
               top: 100.0,
-              right: 0.0,
-              bottom: 0.0,
+              right: 10.0,
+              bottom: 10.0,
             ),
-            child: SvgPicture.asset(
-              "assets/iconfinder_robot_9025976.svg",
-              width: 200,
+            child: Center(
+              child: SvgPicture.asset(
+                "assets/iconfinder_robot_9025976.svg",
+                width: 300,
+              ),
             ),
           ),
           const SizedBox(
@@ -54,7 +57,7 @@ class _LaunchState extends State<Launch> {
               "Robots Assemble",
               style: TextStyle(
                 fontSize: 40,
-                color: Colors.grey,
+                color: Colors.black,
                 fontFamily: "FredokaOne",
               ),
               textAlign: TextAlign.center,

@@ -4,7 +4,8 @@ class CurvedPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = const Color.fromARGB(230, 203, 109, 21);
+    // paint.color = const Color.fromARGB(230, 203, 109, 21);
+    paint.color = Colors.orange[700]!;
     paint.style = PaintingStyle.fill;
     var path = Path();
 
@@ -22,5 +23,5 @@ class CurvedPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
-  }  
+  }
 }
