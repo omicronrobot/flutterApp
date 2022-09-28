@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:testapp/pages/home.dart';
 import 'package:testapp/pages/joypad.dart';
 import 'package:testapp/pages/loading.dart';
 
