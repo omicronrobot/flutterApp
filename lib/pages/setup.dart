@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../widgets/curved_painter.dart';
 import '../widgets/protocol_dropdown.dart';
-import 'control.dart';
 
 class SetupPage extends StatefulWidget {
   const SetupPage({super.key});
