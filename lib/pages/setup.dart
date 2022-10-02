@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:omicronapp/widgets/quide.dart';
 import 'package:omicronapp/widgets/terms_of_use.dart';
 
 import '../widgets/curved_painter.dart';
@@ -55,8 +56,13 @@ class _SetupPageState extends State<SetupPage> {
               height: 40,
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: TextButton(
-                onPressed: () {},
                 style: const ButtonStyle(alignment: Alignment.centerLeft),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return const Guide();
+                  }));
+                },
                 child: Text(
                   'Guide?',
                   style: TextStyle(

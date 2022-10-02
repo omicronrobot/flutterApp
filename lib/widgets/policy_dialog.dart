@@ -33,6 +33,7 @@ class PolicyDialog extends StatelessWidget {
                   return Markdown(
                     data: snapshot.data!,
                     styleSheetTheme: MarkdownStyleSheetBaseTheme.material,
+                    styleSheet: MarkdownStyleSheet(),
                   );
                 }
                 return const Center(
@@ -42,8 +43,6 @@ class PolicyDialog extends StatelessWidget {
             ),
           ),
           TextButton(
-            // padding: const EdgeInsets.all(0),
-            // color: Theme.of(context).buttonColor,
             onPressed: () => Navigator.of(context).pop(),
             child: Container(
               decoration: BoxDecoration(
