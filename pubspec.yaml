@@ -40,6 +40,8 @@ dependencies:
   control_pad: ^1.1.1+1
   flutter_html: ^3.0.0-alpha.2
   validators: ^3.0.0
+  flutter_markdown: ^0.6.12
+  animations: ^2.0.5
 
 
 dev_dependencies:
@@ -68,6 +70,8 @@ flutter:
   assets:
     - assets/wavy_background.jpg
     - assets/iconfinder_robot_9025976.svg
+    - assets/privacy_policy.md
+    - assets/terms_and_conditions.md
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

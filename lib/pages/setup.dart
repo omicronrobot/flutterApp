@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:omicronapp/widgets/terms_of_use.dart';
 
 import '../widgets/curved_painter.dart';
 import '../widgets/protocol_dropdown.dart';
@@ -64,21 +65,7 @@ class _SetupPageState extends State<SetupPage> {
                 ),
               ),
             ),
-            Container(
-              width: width,
-              height: 40,
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: TextButton(
-                onPressed: () {},
-                style: const ButtonStyle(alignment: Alignment.centerLeft),
-                child: Text(
-                  'Privacy',
-                  style: TextStyle(
-                    color: Colors.orange[700],
-                  ),
-                ),
-              ),
-            )
+            const TermsOfUse(),
           ],
         ),
       ),
