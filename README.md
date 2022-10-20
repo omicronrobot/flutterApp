@@ -27,10 +27,10 @@ samples, guidance on mobile development, and a full API reference.
 - [x] Welcome Screen
 - [x] Setup Screen
 - [x] Control Screen
-- [ ] Add validation on setup screen
+- [x] Add validation on setup screen
 - [ ] Establish http, ws or mqtt connection to endpoint from setup
-- [ ] Setup pages for privacy policy
-- [ ] Setup pages for guides
+- [x] Setup pages for privacy policy
+- [x] Setup pages for guides
 - [ ] Get roll, yaw and pitch values from joystick
 - [ ] Get roll, yaw and pitch values from mobile phone accelerometer
 - [ ] Send roll, yaw and pitch values
