@@ -106,6 +106,11 @@ class PortraitMode extends StatelessWidget {
                       iconsColor: Colors.black,
                       innerCircleColor: Colors.black,
                       showArrows: false,
+                      interval: const Duration(seconds: 1),
+                      onDirectionChanged: (degrees, distance) {
+                        // ignore: avoid_print
+                        print(degrees);
+                      },
                     ),
                   ],
                 ),
