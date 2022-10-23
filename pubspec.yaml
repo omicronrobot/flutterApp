@@ -42,6 +42,7 @@ dependencies:
   validators: ^3.0.0
   flutter_markdown: ^0.6.12
   animations: ^2.0.5
+  universal_mqtt_client: ^0.1.1
 
 
 dev_dependencies:
