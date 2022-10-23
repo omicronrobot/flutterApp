@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:omicronapp/widgets/mqtt_connection.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:universal_mqtt_client/universal_mqtt_client.dart';
 import 'package:validators/validators.dart';
 
 import '../pages/control.dart';
@@ -86,10 +89,12 @@ class _SetupFormState extends State<SetupForm> {
                 _endpoint = value;
               },
               validator: (value) {
-                if (isURL(value)) {
-                  return null;
-                } else {
-                  return "Enter Endpoint URI";
+                if (_protocol == "http") {
+                  if (isURL(value)) {
+                    return null;
+                  } else {
+                    return "Enter Endpoint URI";
+                  }
                 }
               },
             ),
@@ -103,16 +108,14 @@ class _SetupFormState extends State<SetupForm> {
             child: ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    //check if form data are valid,
-                    // your process task ahed if all data are valid
-                    // ignore: avoid_print
-                    print(_endpoint);
-                    // ignore: avoid_print
-                    print(_protocol);
-
+                    UniversalMqttClient? mclient;
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return const JoypadPage();
+                      return JoypadPage(
+                        endpoint: _endpoint,
+                        protocol: _protocol,
+                        mqttClient: mclient,
+                      );
                     }));
                   }
                 },
