@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:omicronapp/widgets/mqtt_connection.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:universal_mqtt_client/universal_mqtt_client.dart';
 import 'package:validators/validators.dart';
@@ -96,6 +95,7 @@ class _SetupFormState extends State<SetupForm> {
                     return "Enter Endpoint URI";
                   }
                 }
+                return null;
               },
             ),
           ),
