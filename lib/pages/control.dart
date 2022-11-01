@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:control_pad/control_pad.dart';
+import 'package:omicronapp/widgets/http_connection.dart';
+import 'package:omicronapp/widgets/mqtt_connection.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:universal_mqtt_client/universal_mqtt_client.dart';
 
 class JoypadPage extends StatefulWidget {
-  const JoypadPage({super.key});
+  final String endpoint;
+  final String protocol;
+  final UniversalMqttClient? mqttClient;
+
+  const JoypadPage(
+      {Key? key,
+      required this.endpoint,
+      required this.protocol,
+      this.mqttClient})
+      : super(key: key);
+  // const JoypadPage(String endpoint, String protocol, {super.key});
 
   @override
   State<JoypadPage> createState() => _JoypadPageState();
@@ -16,15 +30,31 @@ class _JoypadPageState extends State<JoypadPage> {
     return Scaffold(
       body: Center(
         child: deviceOrientation == Orientation.portrait
-            ? const PortraitMode()
-            : const LandscapeMode(),
+            ? PortraitMode(
+                endpoint: widget.endpoint,
+                protocol: widget.protocol,
+                mqttClient: widget.mqttClient,
+              )
+            : LandscapeMode(
+                endpoint: widget.endpoint,
+                protocol: widget.protocol,
+                mqttClient: widget.mqttClient,
+              ),
       ),
     );
   }
 }
 
 class PortraitMode extends StatelessWidget {
-  const PortraitMode({super.key});
+  final String endpoint;
+  final String protocol;
+  final UniversalMqttClient? mqttClient;
+  const PortraitMode(
+      {Key? key,
+      required this.endpoint,
+      required this.protocol,
+      required this.mqttClient})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -108,8 +138,12 @@ class PortraitMode extends StatelessWidget {
                       showArrows: false,
                       interval: const Duration(seconds: 1),
                       onDirectionChanged: (degrees, distance) {
-                        // ignore: avoid_print
-                        print(degrees);
+                        if (protocol == "http") {
+                          sendHTTPData(endpoint, degrees, distance);
+                        }
+                        if (protocol == "mqtt") {
+                          sendMQTTData(endpoint, degrees, distance);
+                        }
                       },
                     ),
                   ],
@@ -141,7 +175,15 @@ class PortraitMode extends StatelessWidget {
 }
 
 class LandscapeMode extends StatelessWidget {
-  const LandscapeMode({super.key});
+  final String endpoint;
+  final String protocol;
+  final UniversalMqttClient? mqttClient;
+  const LandscapeMode(
+      {Key? key,
+      required this.endpoint,
+      required this.protocol,
+      required this.mqttClient})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
