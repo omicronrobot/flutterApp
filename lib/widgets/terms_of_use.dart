@@ -20,7 +20,6 @@ class TermsOfUse extends StatelessWidget {
           style: const TextStyle(
             color: Color.fromARGB(255, 245, 124, 0),
           ),
-          // style: Theme.of(context).textTheme.bodyText1,
           children: [
             TextSpan(
               text: "Terms & Conditions ",
