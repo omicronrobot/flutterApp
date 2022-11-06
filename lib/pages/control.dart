@@ -10,14 +10,21 @@ class JoypadPage extends StatefulWidget {
   final String endpoint;
   final String protocol;
   final UniversalMqttClient? mqttClient;
+  final String? mqttUsername;
+  final String? mqttPassword;
+  final String? pubChannel;
+  final String? httpAuth;
 
-  const JoypadPage(
-      {Key? key,
-      required this.endpoint,
-      required this.protocol,
-      this.mqttClient})
-      : super(key: key);
-  // const JoypadPage(String endpoint, String protocol, {super.key});
+  const JoypadPage({
+    Key? key,
+    required this.endpoint,
+    required this.protocol,
+    this.mqttClient,
+    this.mqttUsername,
+    this.mqttPassword,
+    this.pubChannel,
+    this.httpAuth,
+  }) : super(key: key);
 
   @override
   State<JoypadPage> createState() => _JoypadPageState();
@@ -34,11 +41,19 @@ class _JoypadPageState extends State<JoypadPage> {
                 endpoint: widget.endpoint,
                 protocol: widget.protocol,
                 mqttClient: widget.mqttClient,
+                mqttUsername: widget.mqttUsername,
+                mqttPassword: widget.mqttPassword,
+                pubChannel: widget.pubChannel,
+                httpAuth: widget.httpAuth,
               )
             : LandscapeMode(
                 endpoint: widget.endpoint,
                 protocol: widget.protocol,
                 mqttClient: widget.mqttClient,
+                mqttUsername: widget.mqttUsername,
+                mqttPassword: widget.mqttPassword,
+                pubChannel: widget.pubChannel,
+                httpAuth: widget.httpAuth,
               ),
       ),
     );
@@ -49,12 +64,21 @@ class PortraitMode extends StatelessWidget {
   final String endpoint;
   final String protocol;
   final UniversalMqttClient? mqttClient;
-  const PortraitMode(
-      {Key? key,
-      required this.endpoint,
-      required this.protocol,
-      required this.mqttClient})
-      : super(key: key);
+  final String? mqttUsername;
+  final String? mqttPassword;
+  final String? pubChannel;
+  final String? httpAuth;
+
+  const PortraitMode({
+    Key? key,
+    required this.endpoint,
+    required this.protocol,
+    required this.mqttClient,
+    this.mqttUsername,
+    this.mqttPassword,
+    this.pubChannel,
+    this.httpAuth,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +126,6 @@ class PortraitMode extends StatelessWidget {
                               foregroundColor: Colors.black,
                               backgroundColor: Colors.orange[600],
                               shape: const StadiumBorder(),
-                              // padding: const EdgeInsets.all(15),
                               fixedSize: const Size(120, 40),
                               elevation: 15,
                               shadowColor: Colors.orange[600],
@@ -139,10 +162,11 @@ class PortraitMode extends StatelessWidget {
                       interval: const Duration(seconds: 1),
                       onDirectionChanged: (degrees, distance) {
                         if (protocol == "http") {
-                          sendHTTPData(endpoint, degrees, distance);
+                          sendHTTPData(endpoint, httpAuth!, degrees, distance);
                         }
                         if (protocol == "mqtt") {
-                          sendMQTTData(endpoint, degrees, distance);
+                          sendMQTTData(endpoint, mqttUsername!, mqttPassword!,
+                              pubChannel!, degrees, distance);
                         }
                       },
                     ),
@@ -178,12 +202,21 @@ class LandscapeMode extends StatelessWidget {
   final String endpoint;
   final String protocol;
   final UniversalMqttClient? mqttClient;
-  const LandscapeMode(
-      {Key? key,
-      required this.endpoint,
-      required this.protocol,
-      required this.mqttClient})
-      : super(key: key);
+  final String? mqttUsername;
+  final String? mqttPassword;
+  final String? pubChannel;
+  final String? httpAuth;
+
+  const LandscapeMode({
+    Key? key,
+    required this.endpoint,
+    required this.protocol,
+    required this.mqttClient,
+    this.mqttUsername,
+    this.mqttPassword,
+    this.pubChannel,
+    this.httpAuth,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -231,7 +264,6 @@ class LandscapeMode extends StatelessWidget {
                               foregroundColor: Colors.black,
                               backgroundColor: Colors.orange[600],
                               shape: const StadiumBorder(),
-                              // padding: const EdgeInsets.all(15),
                               fixedSize: const Size(120, 40),
                               elevation: 15,
                               shadowColor: Colors.orange[600],
@@ -249,7 +281,6 @@ class LandscapeMode extends StatelessWidget {
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.orange[600],
                         shape: const StadiumBorder(),
-                        // padding: const EdgeInsets.all(15),
                         fixedSize: const Size(120, 40),
                         elevation: 15,
                         shadowColor: Colors.orange[600],
@@ -265,6 +296,15 @@ class LandscapeMode extends StatelessWidget {
                       iconsColor: Colors.black,
                       innerCircleColor: Colors.black,
                       showArrows: false,
+                      onDirectionChanged: (degrees, distance) {
+                        if (protocol == "http") {
+                          sendHTTPData(endpoint, httpAuth!, degrees, distance);
+                        }
+                        if (protocol == "mqtt") {
+                          sendMQTTData(endpoint, mqttUsername!, mqttPassword!,
+                              pubChannel!, degrees, distance);
+                        }
+                      },
                     ),
                   ],
                 ),
