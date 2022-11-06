@@ -1,12 +1,10 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Launch extends StatefulWidget {
-  final String nextRoute; //variable to store the route
-  const Launch({required this.nextRoute});
+  final String nextRoute;
+  const Launch({super.key, required this.nextRoute});
 
   @override
   State<Launch> createState() => _LaunchState();
@@ -15,9 +13,7 @@ class Launch extends StatefulWidget {
 class _LaunchState extends State<Launch> {
   @override
   void initState() {
-    //state initialization
     super.initState();
-    //create a timer to switch from Launch to Home after 3 seconds
     Timer(
       const Duration(seconds: 3),
       () {
@@ -28,9 +24,7 @@ class _LaunchState extends State<Launch> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(230, 203, 109, 21),
       backgroundColor: Colors.orange[700],
       body: Column(
         children: [
