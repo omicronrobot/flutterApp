@@ -223,7 +223,7 @@ class LandscapeMode extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: const Color(0xff152298),
+      backgroundColor: const Color.fromARGB(255, 130, 4, 4),
       body: SafeArea(
         child: Stack(
           alignment: Alignment.topLeft,
@@ -232,64 +232,66 @@ class LandscapeMode extends StatelessWidget {
               child: Container(
                 width: width,
                 height: height,
-                margin: const EdgeInsets.fromLTRB(20, 100, 20, 40),
-                child: Column(
+                margin: const EdgeInsets.fromLTRB(20, 50, 20, 50),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Colors.orange[600],
-                              shape: const StadiumBorder(),
-                              // padding: const EdgeInsets.all(15),
-                              fixedSize: const Size(120, 40),
-                              elevation: 15,
-                              shadowColor: Colors.orange[600],
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            ElevatedButton.icon(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.orange[600],
+                                shape: const StadiumBorder(),
+                                fixedSize: const Size(120, 40),
+                                elevation: 15,
+                                shadowColor: Colors.orange[600],
+                              ),
+                              icon: const Icon(Icons.start_rounded),
+                              label: const Text('Start'),
                             ),
-                            icon: const Icon(Icons.start_rounded),
-                            label: const Text('Start'),
-                          ),
-                          const SizedBox(
-                            width: 25,
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.black,
-                              backgroundColor: Colors.orange[600],
-                              shape: const StadiumBorder(),
-                              fixedSize: const Size(120, 40),
-                              elevation: 15,
-                              shadowColor: Colors.orange[600],
+                            const SizedBox(
+                              width: 25,
                             ),
-                            icon: const Icon(Icons.stop_circle_outlined),
-                            label: const Text('Stop'),
+                            ElevatedButton.icon(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.black,
+                                backgroundColor: Colors.orange[600],
+                                shape: const StadiumBorder(),
+                                fixedSize: const Size(120, 40),
+                                elevation: 15,
+                                shadowColor: Colors.orange[600],
+                              ),
+                              icon: const Icon(Icons.stop_circle_outlined),
+                              label: const Text('Stop'),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        ElevatedButton.icon(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.orange[600],
+                            shape: const StadiumBorder(),
+                            fixedSize: const Size(120, 40),
+                            elevation: 15,
+                            shadowColor: Colors.orange[600],
                           ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 25),
-                    ElevatedButton.icon(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.orange[600],
-                        shape: const StadiumBorder(),
-                        fixedSize: const Size(120, 40),
-                        elevation: 15,
-                        shadowColor: Colors.orange[600],
-                      ),
-                      icon: const Icon(Icons.replay_10_rounded),
-                      label: const Text('Replay'),
+                          icon: const Icon(Icons.replay_10_rounded),
+                          label: const Text('Replay'),
+                        ),
+                      ],
                     ),
                     const SizedBox(
-                      height: 150,
+                      width: 150,
                     ),
                     JoystickView(
                       backgroundColor: Colors.orange[600],
